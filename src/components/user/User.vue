@@ -2,6 +2,8 @@
   <div>
     <h1>The User Page</h1>
     <button @click="navigateHome" class="btn btn-primary">Go to Home</button>
+    <hr>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -9,7 +11,7 @@
 export default {
   methods: {
     navigateHome() {
-      this.$router.push('/');
+      this.$router.push({name: 'home'});
     }
   },
 }
