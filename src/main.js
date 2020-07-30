@@ -7,7 +7,9 @@ Vue.use(VueRouter);
 Vue.config.productionTip = false
 
 const router = new VueRouter({
-  routes
+  routes,
+  mode: 'history',
+//  02737094
 })
 
 new Vue({
