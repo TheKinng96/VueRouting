@@ -9,7 +9,20 @@ Vue.config.productionTip = false
 const router = new VueRouter({
   routes,
   mode: 'history',
-//  02737094
+  // eslint-disable-next-line no-unused-vars
+  scrollBehavior(to,from,savedPosition){
+    if (savedPosition) {
+      return savedPosition;
+    }
+    if (to.hash) {
+      return {selector: to.hash}
+    }
+    return {x:0, y:700}
+  }
+})
+
+router.beforeEach((to, from, next) => {
+  next();
 })
 
 new Vue({

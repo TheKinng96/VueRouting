@@ -8,6 +8,8 @@
         <transition name="slide" mode="out-in">
           <router-view></router-view>
         </transition>
+        <br>
+        <br>
         <router-view name="header-bottom"></router-view>
       </div>
     </div>
